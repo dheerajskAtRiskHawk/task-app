@@ -1,0 +1,18 @@
+<div class="task-detail-container" *ngIf="task">
+    <h2>Task Details</h2>
+
+    <div>
+        <span>ID:</span> {{ task.id }}
+    </div>
+    <div>
+        <span>Title:</span> {{ task.title }}
+    </div>
+    <div>
+        <span>Description:</span> {{ task.description }}
+    </div>
+    <div>
+        <span>Status:</span> {{ task.status }}
+    </div>
+
+    <button>Back to Task List</button>
+</div>

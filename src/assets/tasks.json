@@ -1,0 +1,51 @@
+
+{"tasks":[
+    {
+        "id": 1,
+        "title": "Finish project report",
+        "description": "Complete and submit report",
+        "status": "in-progress"
+    },
+    {
+        "id": 2,
+        "title": "Schedule meetings",
+        "description": "Arrange team and client calls",
+        "status": "todo"
+    },
+    {
+        "id": 3,
+        "title": "Review code changes",
+        "description": "Go through pull requests",
+        "status": "done"
+    },
+    {
+        "id": 4,
+        "title": "Plan Project Roadmap",
+        "description": "Outline major milestones",
+        "status": "in-progress"
+    },
+    {
+        "id": 5,
+        "title": "Write Documentation",
+        "description": "Create user guide",
+        "status": "todo"
+    },
+    {
+        "id": 6,
+        "title": "Conduct User Testing",
+        "description": "Gather feedback",
+        "status": "done"
+    },
+    {
+        "id": 7,
+        "title": "Design UI Mockups",
+        "description": "Create visual layouts",
+        "status": "todo"
+    },
+    {
+        "id": 8,
+        "title": "Fix Outstanding Bugs",
+        "description": "Resolve known issues",
+        "status": "in-progress"
+    }
+]}

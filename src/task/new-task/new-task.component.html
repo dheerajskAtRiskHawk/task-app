@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Create New Task</h2>
+
+    <form>
+        <div class="mb-3">
+            <label for="task-title" class="form-label">Title:</label>
+            <input type="text" id="task-title" name="title" class="form-control" [(ngModel)]="newTask.title" required>
+            <div class="invalid-feedback">
+                Please provide a title.
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="task-description" class="form-label">Description:</label>
+            <textarea id="task-description" name="description" class="form-control"
+                [(ngModel)]="newTask.description"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" (click)="createTask()">Create Task</button>
+    </form>
+</div>

@@ -17,21 +17,10 @@ const routes: Route[]=[
         path:'login', component: LoginComponent
     },
     {
-        path:'tasks', component: TaskContainerComponent, children:[
-            {
-                path: '', component: TaskListComponent, children:[
-                    {
-                        path: ':id', component: TaskDetailComponent
-                    }
-                ]
-            },
-            {
-                path: 'new', component: NewTaskComponent // localhost:4200/tasks/new
-            }
-        ]
+        path:'tasks', loadChildren: ()=> import("../app/task/task.module").then(m=> m.TaskModule)
     },
     {
-        path:'', redirectTo:'/tasks', pathMatch: 'full'
+        path:'', redirectTo:'/login', pathMatch: 'full'
     },
     {
         path:"**", component: NotFoundComponent
@@ -42,7 +31,7 @@ const routes: Route[]=[
 @NgModule({
     declarations: [AppComponent, NotFoundComponent],
     imports: [
-        CommonModule, TaskModule, BrowserModule, AuthModule, RouterModule.forRoot(routes)
+        CommonModule, BrowserModule, AuthModule, RouterModule.forRoot(routes)
     ],
     bootstrap:[AppComponent]
 })

@@ -10,6 +10,7 @@ import { TaskListComponent } from './task/task-list/task-list.component';
 import { TaskContainerComponent } from './task/task-container/task-container.component';
 import { NewTaskComponent } from './task/new-task/new-task.component';
 import { TaskDetailComponent } from './task/task-detail/task-detail.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Route[]=[
     {
@@ -31,12 +32,15 @@ const routes: Route[]=[
     },
     {
         path:'', redirectTo:'/tasks', pathMatch: 'full'
+    },
+    {
+        path:"**", component: NotFoundComponent
     }
 ];
 
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, NotFoundComponent],
     imports: [
         CommonModule, TaskModule, BrowserModule, AuthModule, RouterModule.forRoot(routes)
     ],

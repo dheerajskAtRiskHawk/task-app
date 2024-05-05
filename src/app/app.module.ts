@@ -18,13 +18,14 @@ const routes: Route[]=[
     {
         path:'tasks', component: TaskContainerComponent, children:[
             {
-                path: '', component: TaskListComponent // localhost:4200/tasks
+                path: '', component: TaskListComponent, children:[
+                    {
+                        path: ':id', component: TaskDetailComponent
+                    }
+                ]
             },
             {
                 path: 'new', component: NewTaskComponent // localhost:4200/tasks/new
-            },
-            {
-                path: ':id', component: TaskDetailComponent
             }
         ]
     },

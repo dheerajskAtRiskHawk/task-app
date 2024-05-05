@@ -16,8 +16,10 @@ export class TaskDetailComponent {
   }
 
   ngOnInit(){
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
-    this.task = TasksSource.tasks.find(i=> i.id==Number(id)) as Task;
+    this.route.params.subscribe((params)=>{
+      const id = params["id"];
+      this.task = TasksSource.tasks.find(i => i.id == Number(id)) as Task;
+    })
+   
   }
 } 

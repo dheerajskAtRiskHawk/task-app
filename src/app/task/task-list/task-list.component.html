@@ -2,9 +2,13 @@
 <div class="container mb-4 mt-4">
     <h2>Task List</h2>
 
+    <a routerLink="/tasks">All Tasks</a> &nbsp;
+    <a routerLink="/tasks" [queryParams]="{'status':'done'}">Completed Tasks</a> &nbsp;
+    <a routerLink="/tasks" [queryParams]="{'status':'in-progress'}">In Progress Tasks</a>
+
     <ul class="list-group">
         <li *ngFor="let task of tasks" class="list-group-item">
-           <a routerLink="/tasks/{{task.id}}"> {{ task.title }}</a>
+           <a class="task-item" routerLink="/tasks/{{task.id}}"> {{ task.title }}</a>
             <span class="badge bg-secondary float-end">{{ task.status }}</span>
         </li>
     </ul>

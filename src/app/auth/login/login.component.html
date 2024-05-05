@@ -18,8 +18,17 @@
                                 [(ngModel)]="password">
                         </div>
                         <button type="submit" class="btn btn-primary">Login</button>
+
+
                     </form>
+
                 </div>
+                @if(isShowError){
+                <div class="alert alert-danger" role="alert">
+                    Incorrect Credentials, Please try again.
+                </div>
+                }
+
             </div>
         </div>
     </div>

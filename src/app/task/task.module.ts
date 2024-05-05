@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { TaskListComponent } from './task-list/task-list.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { FormsModule } from '@angular/forms';
+import { TaskContainerComponent } from './task-container/task-container.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [TaskListComponent, NewTaskComponent],
+  declarations: [TaskListComponent, NewTaskComponent, TaskContainerComponent],
   imports: [
-    CommonModule, FormsModule
+    CommonModule, FormsModule, RouterModule
   ],
-  exports: [TaskListComponent]
+  exports: [TaskListComponent, TaskContainerComponent]
 })
 export class TaskModule { }

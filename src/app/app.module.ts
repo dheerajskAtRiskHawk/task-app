@@ -7,13 +7,22 @@ import { AuthModule } from './auth/auth.module';
 import { Route, RouterModule } from '@angular/router';
 import { LoginComponent } from './auth/login/login.component';
 import { TaskListComponent } from './task/task-list/task-list.component';
+import { TaskContainerComponent } from './task/task-container/task-container.component';
+import { NewTaskComponent } from './task/new-task/new-task.component';
 
 const routes: Route[]=[
     {
         path:'login', component: LoginComponent
     },
     {
-        path:'tasks', component: TaskListComponent
+        path:'tasks', component: TaskContainerComponent, children:[
+            {
+                path: '', component: TaskListComponent // localhost:4200/tasks
+            },
+            {
+                path: 'new', component: NewTaskComponent // localhost:4200/tasks/new
+            }
+        ]
     },
     {
         path:'', redirectTo:'/tasks', pathMatch: 'full'

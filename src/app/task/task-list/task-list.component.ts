@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Task } from '../task.model';
-import * as tasksData from '../../assets/tasks.json';
+import * as tasksData from '../../../assets/tasks.json';
 
 
 @Component({

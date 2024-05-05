@@ -9,6 +9,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { TaskListComponent } from './task/task-list/task-list.component';
 import { TaskContainerComponent } from './task/task-container/task-container.component';
 import { NewTaskComponent } from './task/new-task/new-task.component';
+import { TaskDetailComponent } from './task/task-detail/task-detail.component';
 
 const routes: Route[]=[
     {
@@ -21,6 +22,9 @@ const routes: Route[]=[
             },
             {
                 path: 'new', component: NewTaskComponent // localhost:4200/tasks/new
+            },
+            {
+                path: ':id', component: TaskDetailComponent
             }
         ]
     },

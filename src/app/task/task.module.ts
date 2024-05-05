@@ -5,10 +5,11 @@ import { NewTaskComponent } from './new-task/new-task.component';
 import { FormsModule } from '@angular/forms';
 import { TaskContainerComponent } from './task-container/task-container.component';
 import { RouterModule } from '@angular/router';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 
 @NgModule({
-  declarations: [TaskListComponent, NewTaskComponent, TaskContainerComponent],
+  declarations: [TaskListComponent, NewTaskComponent, TaskContainerComponent, TaskDetailComponent],
   imports: [
     CommonModule, FormsModule, RouterModule
   ],

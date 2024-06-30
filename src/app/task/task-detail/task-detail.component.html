@@ -6,18 +6,18 @@
 
 <div class="task-detail-container" *ngIf="task">
 
-    <div>
+    <div class="form-label">
         <span>ID:</span> {{ task.id }}
     </div>
-    <div>
+    <div class="form-label">
         <span>Title:</span> {{ task.title }}
     </div>
-    <div>
+    <div class="form-label">
         <span>Description:</span> {{ task.description }}
     </div>
-    <div>
+    <div class="form-label">
         <span>Status:</span> {{ task.status }}
     </div>
 
-    <a href="/tasks">Back to Task List</a>
+    <button routerLink="/tasks" class="btn btn-primary mt-2">Back to Task List</button>
 </div></div>

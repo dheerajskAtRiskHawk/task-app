@@ -4,7 +4,7 @@
 
     <ul class="list-group">
         <li *ngFor="let task of tasks" class="list-group-item">
-           <a routerLink="/tasks/{{task.id}}"> {{ task.title }}</a>
+           <a routerLink="{{task.id}}"> {{ task.title }}</a>
             <span class="badge bg-secondary float-end">{{ task.status }}</span>
         </li>
     </ul>
